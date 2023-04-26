@@ -7,17 +7,24 @@
 int main(void)
 {
 	int i;
-	long int sum = 0, x = 1, y = 2;
+	long int x = 1, y = 2;
 
-	for (i = 1; i <= 50; i++)
+	for (i = 0; i < 50; i++)
 	{
-		sum = x + y;
-		printf("%ld, ",sum);
-		if (i != 1)
+		if (i == 0)
 		{
-			y = x;
+			printf("%ld", x);
 		}
-		x = sum;
+		else if (i == 1)
+		{
+			printf(", %ld", y);
+		}
+		else
+		{
+			y += x;
+			x = y - x;
+			printf(", %ld", y);
+		}
 	}
 	printf("\n");
 	return (0);
