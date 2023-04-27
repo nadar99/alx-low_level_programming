@@ -2,7 +2,7 @@
 
 /**
  * print_square - print square.
- *@size : size of the square 
+ *@size: size of the square
  * Return: void
  */
 void print_square(int size)
@@ -17,11 +17,11 @@ void print_square(int size)
 			{
 				_putchar('#');
 			}
-			_putchar('\n');
+			if (i != (size - 1))
+			{
+				_putchar('\n');
+			}
 		}
 	}
-	else
-	{
-		_putchar('\n');
-	}
+	_putchar('\n');
 }
