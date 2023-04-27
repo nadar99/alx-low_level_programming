@@ -3,7 +3,7 @@
 /**
  * mul - multiple of a and b.
  *@a: number
- @b: number
+ * @b: number
  *
  * Return: int
  */
