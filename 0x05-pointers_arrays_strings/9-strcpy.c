@@ -6,15 +6,13 @@
  */
 char *_strcpy(char *dest, char *src)
 {
-	char *dest2 = dest;
+	int i;
 
-	while (*src != '\0')
+	for (i = 0; src[i] != '\0'; i++)
 	{
-		*dest2 = *src;
-		dest2++;
-		src++;
+		dest[i] = src[i];
 	}
-	dest2 = '\0';
+	dest[i] = '\0';
 
 	return (dest);
 }
