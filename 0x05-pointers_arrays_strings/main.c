@@ -8,9 +8,12 @@
  */
 int main(void)
 {
-	char *str;
-    str = "Holberton!\0Holberton";
-	puts2(str);
-    
-	return (0);
+ char *str;
+
+    str = "0123456789";
+    puts_half(str);	
+
+    str = "012345678";
+    puts_half(str);	
+    return (0);
 }
