@@ -1,5 +1,5 @@
 /**
- * string_toupper - change string to uppercase
+ * cap_string- change string to uppercase
  *@s : the array
  * Return: string
  */
