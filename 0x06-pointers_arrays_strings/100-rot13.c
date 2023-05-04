@@ -1,5 +1,5 @@
 /**
- * root13 - shift every char by 13
+ * rot13 - shift every char by 13
  *@s : the array
  * Return: string
  */
@@ -19,7 +19,6 @@ char *rot13(char *s)
 			{
 				s[i] -= 13;
 			}
-			
 		}
 		else if (s[i] >= 'A' && s[i] <= 'Z')
 		{
@@ -29,7 +28,7 @@ char *rot13(char *s)
 			}
 			else
 			{
-				s[i] -=13;
+				s[i] -= 13;
 			}
 		}
 		i++;
