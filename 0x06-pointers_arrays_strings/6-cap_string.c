@@ -5,28 +5,24 @@
  */
 char *cap_string(char *s)
 {
-	char *a = s;
-	char seperators[] = {' ', '\t', '\n', ',', ';', '.', '!', '?', '"', '(', ')', '{', '}'};
-	
-	while (*a != '\0')
-	{
-		int is_seperator = 0;
-		int i;
+	int index = 0;
 
-		for (i = 0; i<13 ;i++)
+	while (s[index])
+	{
+		while (!(s[index] >= 'a' && s[index] <= 'z'))
 		{
-			if (seperators[i] == *a)
-			{
-				is_seperator = 1;
-				a++;
-			}
-		}	
-		if (*a >= 'a' && *a <= 'z')
-		{
-			if (is_seperator)
-				*a -= 32;
+			index++;
 		}
-		a++;
+		if (s[index] == ' ' || s[index] == '\t' ||
+				s[index] == '\n' || s[index] == ',' ||
+				s[index] == ';' || s[index] == '.' ||
+				s[index] == '!' || s[index] == '?' ||
+				s[index] == '"' || s[index] == '(' ||
+				s[index] == ')' || s[index] == '{' || s[index] == '}')
+		{
+			s[index] -= 32;
+		}
+		index++;
 	}
 	return (s);
 }
