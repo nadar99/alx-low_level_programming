@@ -6,7 +6,7 @@
 char *leet(char *s)
 {
 	int i = 0, j;
-	char arr[] = {'0', 'l', '@', 'e', 'a', '@', '@', 't'};
+	char arr[8] = {'o', 'l', '@', 'e', 'a', '@', '@', 't'};
 
 	while (s[i])
 	{
