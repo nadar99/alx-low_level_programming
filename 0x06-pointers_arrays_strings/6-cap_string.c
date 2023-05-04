@@ -14,11 +14,12 @@ char *cap_string(char *s)
 			index++;
 		}
 		if (s[index] == ' ' || s[index] == '\t' ||
-				s[index] == '\n' || s[index] == ',' ||
-				s[index] == ';' || s[index] == '.' ||
-				s[index] == '!' || s[index] == '?' ||
-				s[index] == '"' || s[index] == '(' ||
-				s[index] == ')' || s[index] == '{' || s[index] == '}')
+				s[index - 1] == '\n' || s[index - 1] == ',' ||
+				s[index - 1] == ';' || s[index - 1] == '.' ||
+				s[index - 1] == '!' || s[index - 1] == '?' ||
+				s[index - 1] == '"' || s[index - 1] == '(' ||
+				s[index - 1] == ')' || s[index - 1] == '{' ||
+			       	s[index - 1] == '}' || index == 0)
 		{
 			s[index] -= 32;
 		}
