@@ -13,7 +13,7 @@ char *cap_string(char *s)
 		{
 			index++;
 		}
-		if (s[index] == ' ' || s[index] == '\t' ||
+		if (s[index - 1] == ' ' || s[index - 1] == '\t' ||
 				s[index - 1] == '\n' || s[index - 1] == ',' ||
 				s[index - 1] == ';' || s[index - 1] == '.' ||
 				s[index - 1] == '!' || s[index - 1] == '?' ||
