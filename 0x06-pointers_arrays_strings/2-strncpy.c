@@ -22,9 +22,11 @@ char *_strncpy(char *dest, char *src, int n)
 		src_size++;
 		src2++;
 	}
-	if (n2 > src_size)
+	while (n2 > src_size)
 	{
 		*dest2 = '\0';
+		dest2++;
+		n2--;
 	}
 	return (dest);
 
