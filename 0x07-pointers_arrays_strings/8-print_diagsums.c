@@ -1,8 +1,8 @@
 #include <stdio.h>
 /**
- * print_chessboard - a function that prints a chessboard
+ * print_diagsums - a function that prints a chessboard
  * @a: array to print
- *
+ *@size : size of a
  * Return: void
  */
 void print_diagsums(int *a, int size)
@@ -12,7 +12,7 @@ void print_diagsums(int *a, int size)
 	for (i = 0; i < size; i++)
 	{
 		sum1 += a[(size * i) + i];
-		sum2 += a[size * (i + 1) - (i + 1)];	
+		sum2 += a[size * (i + 1) - (i + 1)];
 	}
-	printf("%d, %d\n",sum1, sum2);
+	printf("%d, %d\n", sum1, sum2);
 }
