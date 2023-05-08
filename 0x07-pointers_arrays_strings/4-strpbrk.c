@@ -7,8 +7,6 @@
  */
 char *_strpbrk(char *s, char *accept)
 {
-	int is_found = 0;
-	
 	while (*s != '\0')
 	{
 		char *accept2 = accept;
@@ -16,13 +14,8 @@ char *_strpbrk(char *s, char *accept)
 		while (*accept2 != '\0')
 		{
 			if (*s == *accept2)
-			{	
-				is_found = 1;
-			}
-			else
 			{
-				is_found = 0;
-				break;
+				return (s);
 			}
 			accept2++;
 		}
