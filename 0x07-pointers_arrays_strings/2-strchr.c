@@ -8,9 +8,6 @@
  */
 char *_strchr(char *s, char c)
 {
-	char null_char = '\0';
-	char *Null = &null_char;
-
 	while (*s != '\0')
 	{
 		if (*s == c)
@@ -19,5 +16,9 @@ char *_strchr(char *s, char c)
 		}
 		s++;
 	}
-	return (Null);
+	if (*s == c)
+	{
+		return (s);
+	}
+	return (0);
 }
