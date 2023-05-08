@@ -1,4 +1,3 @@
-#include <stddef.h>
 /**
  * _strchr - a function that locates a character in a string.
  * @s: the string to search
@@ -9,6 +8,9 @@
  */
 char *_strchr(char *s, char c)
 {
+	char null_char = '\0';
+	char *Null = &null_char;
+
 	while (*s != '\0')
 	{
 		if (*s == c)
@@ -17,5 +19,5 @@ char *_strchr(char *s, char c)
 		}
 		s++;
 	}
-	return (NULL);
+	return (Null);
 }
