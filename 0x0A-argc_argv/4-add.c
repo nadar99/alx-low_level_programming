@@ -14,11 +14,11 @@ int main(int argc, char *argv[])
 	}
 	else
 	{
-		int sum = 0, i;
+		int sum = 0, i, x;
 
 		for (i = 1; i < argc; i++)
 		{
-			int x = atoi(argv[i]);
+			x = atoi(argv[i]);
 
 			if (x)
 			{
