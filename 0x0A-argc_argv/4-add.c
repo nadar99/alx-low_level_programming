@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "main.h"
 /**
  * main - Entry point
  *@argc :argumanets count
@@ -9,21 +8,15 @@
  */
 int main(int argc, char *argv[])
 {
-	int sum = 0, i;
+	int sum = 0;
+	char *c;
 
-	for (i = 1; i < argc; i++)
+	while (--argc)
 	{
-		char *c = argv[i];
-
-		if (*c < '0' || *c > '9')
-		{
-			printf("Error\n");
-			return (1);
-		}
-		else
-		{
-			sum += atoi(argv[i]);
-		}
+		for (c = argv[argc]; *c; c++)
+			if (*c < '0' || *c > '9')
+				return (printf("Error\n"), 1);
+		sum += atoi(argv[argc]);
 	}
 	printf("%d\n", sum);
 	return (0);
