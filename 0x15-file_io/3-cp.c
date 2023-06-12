@@ -36,15 +36,14 @@ int main(int ac, char *argv[])
 	buffer = malloc(1024 * sizeof(char));
 	rcount = read(file_from, buffer, 1024);
 	file_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
-	do
-	{
+	do {
 		if (file_from == -1 || rcount == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 			free(buffer);
 			exit(98);
 		}
-        	wcount = write(file_to, buffer, rcount);
+		wcount = write(file_to, buffer, rcount);
 		if (file_to == -1 || wcount == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
